@@ -1,9 +1,9 @@
-
 import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import FeaturedEvents from '../components/FeaturedEvents';
 import AboutSection from '../components/AboutSection';
+import Gallery from '../components/Gallery';
 import Footer from '../components/Footer';
 import { Calendar, Mail, MapPin, MessageSquare, Phone, User } from 'lucide-react';
 
@@ -45,6 +45,7 @@ const Index = () => {
       <Hero />
       <FeaturedEvents />
       <AboutSection />
+      <Gallery />
       
       {/* Testimonials Section */}
       <section className="section-padding bg-morocco-blue/5">
@@ -280,3 +281,4 @@ const Index = () => {
 };
 
 export default Index;
+

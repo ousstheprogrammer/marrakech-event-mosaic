@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Calendar, Star } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,8 +41,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a 
           href="#" 
-          className="font-playfair text-2xl font-bold text-morocco-terracotta"
+          className="flex items-center font-playfair text-2xl font-bold text-morocco-terracotta group"
         >
+          <div className="relative mr-2 w-8 h-8 flex items-center justify-center overflow-hidden">
+            <Star className="h-6 w-6 text-morocco-gold group-hover:animate-spin-slow" strokeWidth={1.5} />
+          </div>
           Marrakech<span className="text-morocco-blue">Events</span>
         </a>
 
@@ -59,9 +62,10 @@ const Navbar = () => {
           ))}
           <a 
             href="#book" 
-            className="btn-primary"
+            className="btn-primary flex items-center space-x-2"
           >
-            Book Event
+            <Calendar className="h-4 w-4" />
+            <span>Book Event</span>
           </a>
         </nav>
 
@@ -91,10 +95,11 @@ const Navbar = () => {
             ))}
             <a 
               href="#book" 
-              className="btn-primary w-full text-center mt-4"
+              className="btn-primary w-full text-center mt-4 flex items-center justify-center space-x-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Book Event
+              <Calendar className="h-4 w-4" />
+              <span>Book Event</span>
             </a>
           </div>
         </div>
